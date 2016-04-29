@@ -1,0 +1,48 @@
+<section id="info">
+  <div class="row">
+    <div class="container">
+      <h1 class="text-center">Wellcome Lord Vader.<br>Please start selecting a ship</h1>
+    </div>
+  </div>
+</section>
+
+<section id="ships-index" class="container">
+
+  <div class="row">
+      
+    <div ng-repeat="ship in ships" class="col-md-3 col-sm-6 col-xs-12">
+      
+      <a ng-href="#/ships/{{ ship.id }}">
+        <article class="card ship-card ">
+
+          <div class="image-index-container col-md-12">
+            <img ng-src="{{ ship.images.index }}" alt="{{ ship.name }} image">
+          </div>
+          
+          <div class="card-block">
+            <h4 class="card-title text-center col-md-12">{{ ship.name | uppercase }}</h4>
+          </div>
+          
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              Units
+              <span class="pull-right data">{{ ship.availables }}</span>
+            </li>
+            <li class="list-group-item">
+              Pilot
+              <span class="pull-right data">{{ ship.pilot }}</span>
+            </li>
+            <li class="list-group-item">
+              Troops
+              <span class="pull-right data">{{ ship.troops }}</span>
+            </li>
+          
+          </ul>
+        </article>
+      </a>
+    
+    </div>
+
+  </div>
+
+</section>

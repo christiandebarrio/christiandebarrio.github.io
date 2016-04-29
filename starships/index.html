@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="starShips">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Star Ships</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Muli:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+  <!-- Vendor Styles -->
+  <link rel="stylesheet" href="vendor/css/jquery-ui.min.css"/>
+  <link rel="stylesheet" href="vendor/css/bootstrap.min.css"/>
+  <!-- Own Styles -->
+  <link rel="stylesheet" href="styles/app.css"/> 
+  <!-- favicon -->
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  
+  <header ng-controller="HeaderController">
+
+    <div id="index-background">
+      <div class="container">
+        <img src="images/index-bg.png" alt="Darth Vader Background">
+      </div>
+    </div>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+
+        <div class="navbar-header">
+          <div id="header-logo-container">
+            <a class="navbar-brand logo" ng-href="#/">
+              <img id="header-logo" src="images/header-logo.png" alt="Brand">
+            </a>
+          </div>
+        </div>
+
+        <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#bs-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse pull-right" id="bs-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li>
+              <span class="menu-actived glyphicon glyphicon-eye-open" ng-show="isActive('/ships')"></span>
+              <a ng-href="#/">Home</a>
+            </li>
+            <li>
+              <span class="menu-actived glyphicon glyphicon-eye-open" ng-show="isActive('/bookings')"></span>
+              <a ng-href="#/bookings">Bookings</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div ng-view autoscroll="true"></div>
+
+  <footer>
+    <div id="footer-container" class="container">
+
+      <div class="row">
+
+        <div id="footer-logo-container">
+          <a ng-href="#/" class="logo">
+            <img id="footer-logo" src="images/footer-logo.png" alt="Brand">
+          </a>
+        </div>
+
+        <div id="copy-container">
+          <p>© DEATH STAR DB</p>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div id="legal-txt" class="text-center">
+          <p>Star ships is an app developed for Lord Vader. For contact us please use the force in you.</p>
+          <p>By Christian de Barrio.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </footer>
+</body>
+
+<!-- Vendor -->
+<script src="vendor/js/jquery-2.2.3.min.js"></script>
+<script src="vendor/js/jquery-ui.min.js"></script>
+<script src="vendor/js/angular.min.js"></script>
+<script src="vendor/js/angular-route.min.js"></script>
+<script src="vendor/js/bootstrap.min.js"></script>
+
+<!-- App -->
+<script src="js/app.js"></script>
+<script src="js/routes.js"></script>
+
+<!-- Directives -->
+
+<!-- Controllers -->
+<script src="js/controllers/header-controller.js"></script>
+<script src="js/controllers/ships-index-controller.js"></script>
+<script src="js/controllers/ships-show-controller.js"></script>
+<script src="js/controllers/bookings-form-controller.js"></script>
+<script src="js/controllers/bookings-index-controller.js"></script>
+
+<!-- Filters -->
+
+<!-- Services -->
+
+</html>

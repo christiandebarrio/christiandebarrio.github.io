@@ -1,0 +1,285 @@
+// colors responsive variables
+$background: #10121D
+$blue: #426496
+$blue-light: #8AA9D6
+$blue-dark: #203048
+$blue-electric: #00CFFF
+$yellow: #FFE700
+
+// breakpoints responsive variables
+$break-xs: 767px
+$break-sm: 768px
+$break-md: 992px
+
+// General
+body
+  background-color: $background
+  color: $blue
+  font-family: 'Muli', sans-serif
+  font-size: 17px
+  font-weight: 300
+  a
+    text-decoration: none
+    &:hover
+      color: $yellow
+      border-bottom: 1px solid $yellow
+      text-decoration: none
+    @media screen and (max-width: $break-xs)
+      font-size: 15px
+
+.container-color
+  border: 1px solid $blue
+  margin-right: 10px
+  height: 24px
+  width: 24px
+  position: relative
+  top: 8px
+  display: inline-block
+
+.logo
+  &:hover
+    border-bottom: none
+
+// Background Image of Lord Vader
+#index-background
+  width: 100%
+  position: absolute
+  top: 20px
+  z-index: -1
+  @media screen and (max-width: $break-xs)
+    top: 50px
+  img
+    width: 100%
+
+// Nav in header
+.navbar
+  background-color: transparent
+  border: none
+  margin-top: 10px
+  .navbar-header
+    display: inline-block
+    img
+      width: 100%
+    @media screen and (max-width: $break-xs)
+      width: 75%
+  .navbar-nav
+    margin-top: 20px
+    li
+      .menu-actived
+        color: $yellow
+        display: inline-block
+        position: relative
+        top: 2px
+        left: 12px
+      a
+        border-bottom: 1px solid transparent
+        color: $yellow
+        text-transform: uppercase
+        font-size: 18px
+        display: inline-block
+        &:hover
+          color: $yellow
+          border-bottom: 1px solid $yellow
+        &:active
+          color: $yellow
+        &:focus
+          color: $yellow
+  .navbar-toggle
+    background-color: transparent
+    border: 1px solid $yellow
+    margin-right: 0
+    margin-top: 13px
+    &:hover
+      background-color: transparent
+    &:focus
+      background-color: transparent
+    .icon-bar
+      background-color: $yellow
+  .navbar-collapse
+    border: none
+    box-shadow: none
+    margin: -10px 0 0
+
+// section info
+#info
+  color: $blue-electric
+  margin: 95px 0
+  @media screen and (max-width: $break-md)
+    margin: 20px 0 40px
+  @media screen and (max-width: $break-xs)
+    margin: -10px 0 5px
+  .container
+    padding: 0 10%
+    display: table
+    h1
+      @media screen and (max-width: $break-xs)
+        font-size: 18px
+  .image-info-container
+    display: table-cell
+    vertical-align: middle
+    width: 100px
+    @media screen and (max-width: $break-xs)
+      width: 50px
+    img
+      width: 100%
+  .text-info-container
+    display: table-cell
+    vertical-align: middle
+    padding: 0 20px
+    @media screen and (max-width: $break-xs)
+      padding: 0 10px  
+    h3
+      line-height: 40px
+      padding: 0
+      margin: 0
+      @media screen and (max-width: $break-xs)
+        font-size: 12px
+        line-height: 20px
+
+// ships/index
+#ships-index
+  text-transform: uppercase
+  margin-bottom: 50px
+  a
+    text-decoration: none
+  .ship-card
+    background-color: black
+    border: 2px solid $blue
+    border-radius: 4px
+    color: $blue
+    margin: 4px -11px
+    &:hover
+      box-shadow: 0 0 0 2px $yellow
+      border: 2px solid $yellow
+    .image-index-container
+      margin: 30px 0
+      min-height: 150px     
+      img
+        display: block
+        margin: 0 auto
+        width: 100%
+        @media screen and (max-width: $break-xs)
+          width: 75%
+    .card-title
+      color: $yellow
+      text-align: center
+      height: 35px
+    .data
+      color: $blue-light
+    .list-group
+      padding-left: 10px
+      padding-right: 10px
+      .list-group-item
+        border: none
+        background-color: transparent
+        border-bottom: 1px solid $blue-dark
+        padding-left: 5px
+        padding-right: 5px
+      .list-group-item:last-child
+        border-bottom: none
+
+// ships/show
+.ship-show
+  color: rgba(255,255,255,0.7)
+  h1
+    color: $yellow
+    text-transform: uppercase
+    @media screen and (max-width: $break-xs)
+      font-size: 20px
+  h4
+    border-bottom: 3px solid white
+    color: white
+    padding-bottom: 10px
+    text-transform: uppercase
+    width: 140px
+  #ship-detail
+    @media screen and (max-width: $break-xs)
+      font-size: 12px
+    #ship-description
+      img
+        margin-bottom: 20px
+        width: 100%
+        border: 2px solid $blue
+        border-radius: 4px
+      table
+        width: 80%
+        margin: 30px auto
+        th, td
+          padding: 20px 0
+          text-align: center
+          border-right: 1px solid $blue
+        th:last-child, td:last-child
+          border-right: none
+        th
+          border-bottom: 1px solid $blue
+          text-transform: uppercase
+  #ship-preferences
+    background-color: rgba(255,255,255,0.1)
+    margin: 60px 0 0
+    padding: 60px 0
+    h2
+      color: $blue-electric
+      margin: 0 0 50px
+    input
+      color: $blue
+      border: 2px solid $blue
+      border-radius: 4px
+      padding: 0 5px
+    label
+      font-weight: 300
+    #booking-color-select
+      color: $blue
+    .row
+      margin-bottom: 20px
+    .btn
+      background-color: $yellow
+      border: 2px solid white
+      color: $blue
+      font-size: 1em
+      font-weight: bold
+      margin: 50px 0 0
+      padding: 5px 50px
+      text-transform: uppercase
+
+// Bookings
+
+#bookings-index
+  #bookings-table
+    margin-bottom: 80px
+    width: 100%
+    tr
+      border-bottom: 1px solid $blue-electric
+    th
+      color: $blue-light
+    td, th
+      padding: 30px 0
+      @media screen and (max-width: $break-xs)
+        padding: 10px 0
+    // available td responsive
+    .bk-date
+    .bk-ship
+    .bk-color
+      @media screen and (max-width: $break-xs)
+        display: none
+    .bk-crew
+      @media screen and (max-width: $break-xs)
+        display: none
+    .bk-troops
+      @media screen and (max-width: $break-xs)
+        display: none
+
+// footer
+footer
+  background-color: $blue-dark
+  color: $blue
+  #footer-container
+    padding: 40px
+    #footer-logo-container
+      float: left
+    #copy-container
+      color: white
+      font-size: 13px
+      float: right
+      margin: 7px 0 0 35px
+    #legal-txt
+      margin-top: 30px

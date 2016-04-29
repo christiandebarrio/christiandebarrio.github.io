@@ -1,0 +1,44 @@
+<section id="info">
+  <div class="row">
+    <div class="container">
+      <h1 class="text-center">Your bookings, Lord Vader</h1>
+    </div>
+  </div>
+</section>
+
+<section id="bookings-index">
+  <div class="container">
+    <div class="row container">
+
+      <table id="bookings-table">
+        <tr>
+          <th class="bk-date">Date</th>
+          <th class="bk-ship">Ship</th>
+          <th class="bk-color">Color</th>
+          <th class="bk-crew">crew</th>
+          <th class="bk-troops">troops</th>
+        </tr>
+
+        <tr  ng-hide="bookings.length">
+          <td class="bk-date">No Bookings</td>
+          <td class="bk-ship">-</td>
+          <td class="bk-color">-</td>
+          <td class="bk-crew">-</td>
+          <td class="bk-troops">-</td>
+        </tr>
+
+        <tr ng-repeat="booking in bookings | filter:upcomingBookings | orderBy: 'date'">
+          <td class="bk-date">{{ booking.date | date }}</td>
+          <td class="bk-ship">{{ booking.ship }}</td>
+          <td class="bk-color"><div class="container-color" style="background-color: {{ booking.color }}"></div></td>
+          <td class="bk-crew">{{ booking.crew }}</td>
+          <td class="bk-troops">{{ booking.troops }}</td>
+
+        </tr>
+
+      </table>
+
+    </div>
+  </div>
+
+</section>

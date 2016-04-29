@@ -1,0 +1,130 @@
+ <div class="ship-show">
+   <section id="info">
+    <div class="row">
+      <div class="container">
+        <div class="image-info-container">
+          <img src="images/trooper.png" alt="Trooper">
+        </div>
+        <div class="text-info-container">
+          <h3>Good choice Lord Vader, you can book this option and adjust your preferences. Please if you need some help use the force to contact us.</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ship-detail" class="container">
+
+    <div id="ship-name" class="row">
+      <div class="container">
+        <a ng-href="#/ships">< back</a>
+        <h1>{{ ship.name | uppercase }}</h1>
+      </div>
+    </div>
+
+    <div id="ship-description" class="row">
+      <div class="col-md-4 col-sm-4 col-sx-12 pull-right">
+        <img ng-src="{{ ship.images.detail }}" alt="{{ ship.name }} image">
+      </div>
+      <div class="col-md-8 col-sm-8 col-sx-12">
+        <h4>Description</h4>
+        <p>{{ ship.description }}</p>
+        <table>
+          <tr>
+            <th>Units</th>
+            <th>Pilot</th>
+            <th>Troops</th>
+            <th>Speed</th>
+          </tr>
+          <tr>
+            <td>{{ ship.availables }} / {{ ship.units }}</td>
+            <td>{{ ship.pilot }}</td>
+            <td>{{ ship.troops }}</td>
+            <td>{{ ship.speed }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="ship-preferences" class="container-fluid">
+    <form ng-submit="add()" name="bookingForm" ng-controller="BookingFormController as formCtrl">
+      <div class="container">
+
+        <h2>Adjust preferences:</h2>
+
+        <div id="ship-date" class="row">
+          <div class="col-md-12 col-sm-12 col-sx-12">
+            <h4>Date</h4>
+          </div>
+          <div class="col-md-6 col-sm-6 col-sx-12">
+            <p>Select a date for booking this SHIP</p>
+          </div>
+          <div class="col-md-6 col-sm-6 col-sx-12">
+            <input type="date" name="bookingDate" min="{{ today | date:'yyyy-MM-dd' }}" ng-model="booking.date" required>
+            <!-- datepicker from jquery-ui
+            <input type="date" id="datepicker" name="bookingDate" ng-model="booking.date" required> -->
+          </div>
+        </div>
+
+        <div id="ship-color" class="row">
+          <div class="col-md-12 col-sm-12 col-sx-12">
+            <h4>Color</h4>
+          </div>
+          <div class="col-md-6 col-sm-6 col-sx-12">
+            <p>Pick your ship's color choice. This color will affect interiors</p>
+          </div>
+          <div class="col-md-6 col-sm-6 col-sx-12">
+            <div class="container-color" style="background-color: {{ booking.color }}"></div>
+            <select id="booking-color-select" ng-model="booking.color" ng-init="booking.color='#000000'" required>
+              <option value="#000000">Black</option>
+              <option value="#74d978">Green</option>
+              <option value="#fb7254">Red</option>
+              <option value="#f7f763">Yellow</option>
+              <option value="#9C62B9">Purple</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="ship-crew" class="row">
+          <div class="col-md-12 col-sm-12 col-sx-12">
+            <h4>Crew</h4>
+          </div>
+          <div class="col-md-6 col-sm-6 col-sx-12">
+            <p>Do you need crew assistance?</p>
+          </div>
+          <div class="col-md-6 col-sm-6 col-sx-12">
+            <label>
+              <input type="radio" ng-model="booking.crew" value="true" ng-required="!booking.crew">
+              Crew is required
+            </label><br/>
+            <label>
+              <input type="radio" ng-model="booking.crew" value="false" ng-required="!booking.crew">
+              No, I will Pilot the Ship
+            </label>
+          </div>
+        </div>
+
+        <div id="ship-troops" class="row">
+          <div class="col-md-12 col-sm-12 col-sx-12">
+            <h4>Troops</h4>
+          </div>
+          <div class="col-md-6 col-sm-6 col-sx-12">
+            <p ng-hide="ship.troops == 0">This ship have up to {{ ship.troops }} troopers capicity</p>
+            <p ng-show="ship.troops == 0">This ship have not capicity for troops</p>
+          </div>
+          <div class="col-md-6 col-sm-6 col-sx-12">
+            <input type="number" ng-model="booking.troops" min="0" max="{{ ship. troops }}" ng-init="booking.troops=0"  ng-hide="ship.troops == 0">
+            <input type="number" ng-model="booking.troops" min="0" max="{{ ship. troops }}" ng-init="booking.troops=0"  ng-show="ship.troops == 0" disabled>
+          </div>
+        </div>
+
+        <div id="ship-book-submit" class="row">
+          <div class="col-md-12 col-sm-12 col-sx-12">
+            <button class="btn" type="submit">Book now</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+</div>
