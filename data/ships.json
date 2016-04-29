@@ -1,0 +1,155 @@
+[
+  {
+   "id": 1,
+   "name": "Imperial Cargo",
+   "description": "The cargo ship model was based around a heavily modified Acclamator-class assault ship left over from the Clone Wars, with additional thrusters and changed outer hull structure. The ships sacrificed many of their weaponry emplacements to carry additional tons of cargo.",
+   "units": 100,
+   "availables": 100,
+   "pilot": 4,
+   "troops": 16000,
+   "speed": 980,
+   "weapons": "2 Quad-turbolaserbatteries , 4 Light point-defenselaser cannon batteries",
+   "turbo": null,
+   "detection": null,
+   "location": null,
+   "images": { "index":  "images/ships/imperial-cargo-index.jpg",
+               "detail":  "images/ships/imperial-cargo-detail.jpg"
+             }
+  },
+  {
+   "id": 2,
+   "name": "TIE Hunter",
+   "description": "The Starhunter was a further evolution of the TIE/IN interceptor starfighter that saw use with the navy of the Imperial Remnant during the latter stages of the Second Galactic Civil War. Boasting more firepower, with heavy weapons in addition to laser cannons, the Starhunter also carried a deflector shield generator. It was operated by a single pilot.",
+   "units": 65,
+   "availables": 65,
+   "pilot": 1,
+   "troops": 0,
+   "speed": 1500,
+   "weapons": "2 Laser cannons, 1 Proton torpedo launcher",
+   "turbo": null,
+   "detection": null,
+   "location": null,
+   "images": { "index":  "images/ships/tie-hunter-index.jpg",
+               "detail":  "images/ships/tie-hunter-detail.jpg"
+             }
+  },
+  {
+   "id": 3,
+   "name": "Experimental TIE Fighter",
+   "description": "Being based on the TIE Interceptor, the M3 had nearly the same performance, with only slightly reduced maneuverability and speed. Like the other TIE Experimentals, the M3 was remotely controlled by a modified Beta-class ETR-3 escort transport. Most TIE M3's also had shield generators added with no discernible loss of performance.\n",
+   "units": 50,
+   "availables": 50,
+   "pilot": "Remote",
+   "troops": 0,
+   "speed": 1250,
+   "weapons": "2 Warhead launchers, 8 concussion misssiles",
+   "turbo": null,
+   "detection": null,
+   "location": null,
+   "images": { "index":  "images/ships/experimental-tie-fighter-index.jpg",
+               "detail":  "images/ships/experimental-tie-fighter-detail.jpg"
+             }
+  },
+  {
+   "id": 4,
+   "name": "TIE Bomber",
+   "description": "Three years before the Battle of Yavin, TIE bombers were being launched from aQuasar Fire-class carrier above Ryloth to attack Cham Syndulla's rebel cell. When the Lothal rebel cell attacked, trying to capture the carrier, most TIE bombers were shot down by the rebels, manning gun stations on the carrier.",
+   "units": 43,
+   "availables": 43,
+   "pilot": "Remote",
+   "troops": 0,
+   "speed": 850,
+   "weapons": "Conclussion missiles, 2 Laser cannos, 2 Orbital mines, 2 Proton bombs",
+   "turbo": null,
+   "detection": null,
+   "location": null,
+   "images": { "index":  "images/ships/tie-bomber-index.jpg",
+               "detail":  "images/ships/tie-bomber-detail.jpg"
+             }
+  },
+  {
+   "id": 5,
+   "name": "TIE Interceptor",
+   "description": "Lacking both shields and a hyperdrive, it made up for its lack of defensive capabilities with a top speed of 1,250kph owing to upgraded engines providing considerably improved maneuverability and speed. In addition, four laser canons on its wingtips allowed for far more firepower to overload the shields on an enemy craft.",
+   "units": 40,
+   "availables": 40,
+   "pilot": 1,
+   "troops": 0,
+   "speed": 1250,
+   "weapons": "6 laser cannons",
+   "turbo": null,
+   "detection": null,
+   "location": null,
+   "images": { "index":  "images/ships/tie-interceptor-index.jpg",
+               "detail":  "images/ships/tie-interceptor-detail.jpg"
+             }
+  },
+  {
+   "id": 6,
+   "name": "Darth Vader's TIE Fighter",
+   "description": "The Advanced x1 had more cockpit capacity than other TIEs, thus catering to the larger-than-average figure of Darth Vader. It was built to Vader's specifications by Santhe/Sienar Technologies at the Sienar Advanced Projects Laboratory. Unlike the class standard, Vader's TIE Advanced apparently possessed a life-support system.",
+   "units": 5,
+   "availables": 5,
+   "pilot": 1,
+   "troops": 11,
+   "speed": 1500,
+   "weapons": "2 Laser cannons, 1 Proton torpedo launcher",
+   "turbo": null,
+   "detection": null,
+   "location": null,
+   "images": { "index":  "images/ships/darth-vaders-tie-fighter-index.jpg",
+               "detail":  "images/ships/darth-vaders-tie-fighter-detail.jpg"
+             }
+  },
+  {
+   "id": 7,
+   "name": "Inquisitor's TIE",
+   "description": "The TIE Advanced was equipped with a cockpit access hatch, targeting sensors and solar collectors. Its special folding wings allowed it greater speed than the 1,200 kph of a standard TIE fighter. It boasted an armament of two laser cannonsand could carry up to 20 missile shells. Unlike the production version of the v1, the Inquisitor's personal ship also had life support in the cockpit, allowing it to be flown without a flight suit if desired. It also lacked a hyperdrive, which meant that it relied on capital ships for long-range transportation, like most of the TIE models.",
+   "units": 2,
+   "availables": 2,
+   "pilot": 1,
+   "troops": 3,
+   "speed": 1600,
+   "weapons": "2 Laer cannons, 1 Projectile launcher that fired CC-23 S thread trackers, 20 Missile shells",
+   "turbo": null,
+   "detection": null,
+   "location": null,
+   "images": { "index":  "images/ships/inquisitors-tie-index.jpg",
+               "detail":  "images/ships/inquisitors-tie-detail.jpg"
+             }
+  },
+  {
+   "id": 8,
+   "name": "V-wing Fighter",
+   "description": "V-wings were some of the more recent spacecraft in the Republic Navy, and frequently filled the role as combat support ships. The small silhouette, high speed, and great agility of this fighter made it hard to target and a very effective ship despite its small size. They were later succeeded by the Imperial TIE Fighter andits variants, as well as the Rebel RZ-1 A-wing interceptor, all of which incorporated aspects of the V-wing into their designs.",
+   "units": 15,
+   "availables": 15,
+   "pilot": 1,
+   "troops": 0,
+   "speed": 1050,
+   "weapons": "1 Twin Laser cannon, Flak guns and Proton bombs",
+   "turbo": null,
+   "detection": null,
+   "location": null,
+   "images": { "index":  "images/ships/v-wing-fighter-index.jpg",
+               "detail":  "images/ships/v-wing-fighter-detail.jpg"
+             }
+  },
+  {
+   "id": 9,
+   "name": "TIE Fighter",
+   "description": "The basis for the TIE fighter can be traced back to Kuat Systems Engineering's Alpha-3 Nimbus starfighter, along with several other outmoded models from the Old Republic. Like their predecessors, TIE's employed two vertical wings similar in appearance to V-wing starfighters, however the Eta-2Actis-class light interceptor bore even more similarities with its central cockpit pod, twin ion engines and common weapons technology.",
+   "units": 77,
+   "availables": 77,
+   "pilot": 1,
+   "troops": 0,
+   "speed": 1200,
+   "weapons": "2 Laser cannons, 1 Proton torpedo launcher",
+   "turbo": null,
+   "detection": null,
+   "location": null,
+   "images": { "index":  "images/ships/tie-fighter-index.jpg",
+               "detail":  "images/ships/tie-fighter-detail.jpg"
+             }
+  }
+]
